@@ -5,7 +5,7 @@
 const generate_array = (min, max, size) => {
     const arr = [];
     for (let i = 0; i < size; i++) {
-        arr[i] = Math.floor(Math.random() * 200 -100);
+        arr[i] = Math.floor(Math.random() * (max - min) + min);
     }
     return arr;
 }
