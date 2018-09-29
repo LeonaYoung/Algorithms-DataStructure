@@ -21,16 +21,14 @@ const validate_order = array => {
 
 const selection_sort = array => {
   for (let i = 0; i < array.length - 1; i++) {
-    let value = array[i];
     let index = i;
     for (let j = i + 1; j < array.length; j++) {
-      if (array[j] < value) {
-        value = array[j];
+      if (array[j] < array[index]) {
         index = j;
       }
     }
     const temp = array[i];
-    array[i] = value;
+    array[i] = array[index];
     array[index] = temp;
   }
   return array
@@ -40,6 +38,7 @@ array = generate_array(-100, 100, 10)
 console.log('array: ', array)
 
 array = selection_sort(array)
+console.log('sort array: ', array)
 
 console.log(validate_order(array) === true ?
   'It is sorted.' : 'Not sorted')
