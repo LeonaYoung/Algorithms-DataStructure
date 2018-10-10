@@ -1,5 +1,6 @@
 /*
  * selection Sort
+ * 从未排序的序列中找到最小的，放到已排序的末尾
  */
 
 const generate_array = (min, max, size) => {
